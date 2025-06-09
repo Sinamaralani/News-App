@@ -8,29 +8,23 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
-import com.example.newsapp.domain.model.Article
-import com.example.newsapp.presentation.details.components.DetailsTopBar
 import androidx.core.net.toUri
-import androidx.room.RoomDatabase
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import com.example.newsapp.R
+import com.example.newsapp.domain.model.Article
 import com.example.newsapp.presentation.common.Dimens.ArticleImageHeight
 import com.example.newsapp.presentation.common.Dimens.MediumPadding1
+import com.example.newsapp.presentation.details.components.DetailsTopBar
 
 @Composable
 fun DetailsScreen(
@@ -45,7 +39,6 @@ fun DetailsScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .statusBarsPadding()
     ) {
         DetailsTopBar(
             onBrowsingClick = {
