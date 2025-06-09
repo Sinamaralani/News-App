@@ -62,7 +62,8 @@ fun NewsNavigator() {
                 backStackState?.destination?.route == Route.BookmarkScreen.route
     }
 
-    Scaffold(modifier = Modifier.fillMaxSize(), bottomBar = {
+    Scaffold(modifier = Modifier.fillMaxSize(),
+        bottomBar = {
         if (isBottomVisible) {
             NewsBottomNavigation(
                 items = bottomNavigationItems,
@@ -89,6 +90,7 @@ fun NewsNavigator() {
         }
     }) {
         val bottomPadding = it.calculateBottomPadding()
+
         NavHost(
             modifier = Modifier.padding(bottom = bottomPadding),
             navController = navController,

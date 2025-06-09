@@ -8,6 +8,5 @@ import com.example.newsapp.domain.model.Article
 @Database(entities = [Article::class], version = 2)
 @TypeConverters(NewsTypeConverter::class)
 abstract class NewsDataBase : RoomDatabase() {
-
     abstract val newsDao: NewsDao
 }

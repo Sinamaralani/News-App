@@ -1,6 +1,8 @@
 package com.example.newsapp.presentation.navgraph
 
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -14,7 +16,7 @@ import com.example.newsapp.presentation.onboarding.OnBoardingViewModel
 fun NavGraph(startDestination: String) {
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = startDestination) {
+    NavHost( modifier = Modifier.statusBarsPadding() ,navController = navController, startDestination = startDestination) {
 
         navigation(
             route = Route.AppStartNavigation.route,
