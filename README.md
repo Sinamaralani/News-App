@@ -1,5 +1,5 @@
 # Description
-<p>A modern News App built with Jetpack Compose using MVVM Clean Architecture.
+<p>A modern News App built with Jetpack Compose using MVVM & Clean Architecture.
 Powered by Retrofit, Room, Paging, and Hilt for efficient data flow and dependency injection.
 Includes a sleek splash screen and responsive UI for a seamless user experience.</p>
 
